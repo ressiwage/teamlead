@@ -39,7 +39,6 @@
     color:var(--primary); 
 }
 #logo{
-    position:absolute;
     font-size: 1.5em;
     text-shadow: 0 1em 1em 0;
     font-family: 'Kanit', sans-serif;
@@ -252,6 +251,9 @@ section:nth-of-type(3) .content p{
         clip-path:none!important;
         position: relative!important;
         width:100%!important;
+    }
+    #logo{
+        position:absolute;
     }
     nav{
         font-size: 1.5em;
