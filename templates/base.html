@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="автор: RESSIWAGE">
+  <meta name="viewport" content="width=device-width, user-scalable=no,
+      initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel=stylesheet href={{ url_for('static', filename='css/normalize.css' )}}>
+  <link rel=stylesheet href={{ url_for('static', filename='css/stylesheet.css' )}}>
+  <title>ressiwage</title>
+</head>
+
+<body>
+  <nav>
+    <span style="float: left;" id="logo">RESSIWAGE</span>
+    <button id="burger" onclick="this.classList.toggle('opened')">☰</button>
+    <div class="accordion-body flex-container">
+      <div><a class="flex-item" href="#s1">обо мне</a></div>
+      <div><a class="flex-item" href="#s2">почему я</a></div>
+      <div><a class="flex-item" href="#s3">мои работы</a></div>
+      <div><a class="flex-item" href="#s4">плюсы и минусы</a></div>
+      <div><a class="flex-item" href="#s5">связь со мной</a></div>
+    </div>
+  </nav>
+
+  <main>
+
+    <section id="s1">
+      <i id="profile"></i>
+      <h1>
+        C#, Python, JS программист
+      </h1>
+      <p>
+        Я вырос в городе Кунгур, сейчас живу в Перми. Учусь в Высшей Школе Экономики на втором курсе на специальности
+        "Программный инженер". Сейчас мне 18 лет.
+      </p>
+    </section>
+
+    <section id="s2">
+      <h1>почему именно я?</h1>
+      <p>Я очень быстро обучаюсь и хорошо запоминаю информацию, у меня большой бэкграунд в программировании, а к работе
+        я подхожу со всей ответственностью.</p>
+      <p>Я работал с: Python, C#, JS, Bootstrap, Sqlite, Postgresql, SQLAlchemy, Flask, Winforms, Vue.js, LINQ, Selenium
+        и ещё множеством технологий. Я написал свою первую строку кода в 13.</p>
+    </section>
+
+    <section id="s3">
+      <h1>моё портфолио</h1>
+      <div class="flex-container">
+        <div class="card flex-item" style="padding-top: auto">
+          <div class="content">
+            <i id="wlf"></i>
+            <h1>клон wolfenstein</h1>
+            <p>В качестве курсового проекта я в одиночку разработал на c# движок, похожий на движок первого
+              вульфенштейна и написал на нём игру, не используя ничего кроме винформс. <a href="https://github.com/RESSIVAGE/COURSEPROJ/tree/master"> Посмотреть </a></p>
+          </div>
+          <div class="flap"></div>
+
+        </div>
+        <div class="card flex-item">
+          <div class="content">
+            <i id="dsr"></i>
+            <h1>десериализатор</h1>
+            <p>в качестве учебного проекта мной была разработана программа, которая бы десериализовала данные из json
+              файла и искала конфликты. <a href="https://github.com/RESSIVAGE/c-sharp-json"> Посмотреть </a></p>
+          </div>
+          <div class="flap"></div>
+
+        </div>
+        <div class="card flex-item">
+          <div class="content">
+            <i id="mst"></i>
+            <h1>сайт по отслеживанию погоды в перми</h1>
+            <p>Я разработал этот сайт в качестве демонстрации своих навыков фулстека. В нём используется python (flask),
+              postgresql, bootstrap. Развёрнут на heroku. <a href="https://ibersenyov-test.herokuapp.com"> Посмотреть </a></p>
+          </div>
+          <div class="flap"></div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="s4">
+      <div class="flex-container" style="align-items:flex-start;">
+        <div class="flex-item">
+          <h1>мои сильные стороны</h1>
+          <ul>
+            <li>
+              <h4>1) обучаемость</h4>
+              <p>Я хорошо знаю принципы программирования и мне не составляет труда быстро выучить новый паттерн или
+                фреймворк.</p>
+            </li>
+            <li>
+              <h4>2) аналитический склад ума</h4>
+              <p>У меня большой опыт в программировании, а потому все проблемы я решаю быстро и последовательно</p>
+            </li>
+            <li>
+              <h4>3) коммуникативность</h4>
+              <p>Я могу найти общий язык с людьми, с которыми мне придётся работать.</p>
+            </li>
+            <li>
+              <h4>4) стрессоустойчивость</h4>
+              <p>В профессии программиста очень важно иметь резистентность к стрессу, так как иначе очень легко сдаться
+                или перегореть.</p>
+            </li>
+            <li>
+              <h4>5) целеустремлённость</h4>
+              <p>Я всегда добиваюсь того результата, на который ориентируюсь, как бы ни было сложно его достичь.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-item">
+          <h1>мои слабые стороны</h1>
+          <ul>
+            <li>
+              <h4>1) креативность</h4>
+              <p>Несмотря на то, что я умею разрабатывать сайты, мне намного проще верстать по макету, чем от себя, так
+                как мои креативные способности уступают аналитическим.</p>
+            </li>
+            <li>
+              <h4>2) небольшой опыт коммерческой разработки</h4>
+              <p>Из-за того, что последние 3 года я был сильно занят учёбой, из опыта оплачиваемой разработки у меня
+                лишь заказы на фрилансе, но я всегда готов расти и развиваться.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="s5">
+      <h2>как со мной связаться?</h2>
+      <p>со мной можно связаться через почту - ressiwage@ya.ru, <a href="https://vk.com/ressiwage">вк</a> или <a
+          href="https://t.me/ressiwage">телеграм</a>. Я также отвечаю на звонки по номеру +7(919)466-00-01.</p>
+    </section>
+  </main>
+
+  <footer>
+  </footer>
+
+
+
+</body>
+
+</html>
