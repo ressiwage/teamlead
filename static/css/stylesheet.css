@@ -142,7 +142,7 @@ section:nth-of-type(1) p{
     margin-left: 1em;
 }
 section:nth-of-type(1) #profile{
-    background-color:#9C19E0;
+    background-color:var(--primary);
     position: absolute;
     display: block;
     right: 0;
