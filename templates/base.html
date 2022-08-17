@@ -8,139 +8,244 @@
       initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel=stylesheet href={{ url_for('static', filename='css/normalize.css' )}}>
+  <link rel=stylesheet href={{ url_for('static', filename='css/slider.css' )}}>
   <link rel=stylesheet href={{ url_for('static', filename='css/stylesheet.css' )}}>
+  <link rel=stylesheet href={{ url_for('static', filename='css/form.css' )}}>
   <title>ressiwage</title>
+
 </head>
 
 <body>
-  <nav>
-    <span style="float: left;" id="logo">RESSIWAGE</span>
-    <button id="burger" onclick="this.classList.toggle('opened')">☰</button>
-    <div class="accordion-body flex-container">
-      <div><a class="flex-item" href="#s1">обо мне</a></div>
-      <div><a class="flex-item" href="#s2">почему я</a></div>
-      <div><a class="flex-item" href="#s3">мои работы</a></div>
-      <div><a class="flex-item" href="#s4">плюсы и минусы</a></div>
-      <div><a class="flex-item" href="#s5">связь со мной</a></div>
+
+
+  <!--тонкие линии, размытость-->
+
+  <section>
+    <video autoplay muted loop id="video">
+      <source src={{ url_for('static', filename='video/background.mp4' )}} type="video/mp4">
+    </video>
+
+    <h1 class="header" style="margin-top:0;">Lorem ipsum</h1>
+    <div class="inline-list">
+      <div class="inline-list__item">
+        <i class="img product"></i>
+      </div>
+      <div class="inline-list__item" style="margin-right:20%;">
+        <ul>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+          <li>Lorem ipsum</li>
+        </ul>
+      </div>
     </div>
-  </nav>
+    <button class="orderbtn" onclick="window.scrollTo(0, document.body.scrollHeight);">заказать сейчас!</button>
+  </section>
 
-  <main>
-
-    <section id="s1">
-      <i id="profile"></i>
-      <h1>
-        C#, Python, JS программист
-      </h1>
-      <p>
-        Я вырос в городе Кунгур, сейчас живу в Перми. Учусь в Высшей Школе Экономики на втором курсе на специальности
-        "Программный инженер". Сейчас мне 18 лет.
-      </p>
-    </section>
-
-    <section id="s2">
-      <h1>Почему именно я?</h1>
-      <p>Я очень быстро обучаюсь и хорошо запоминаю информацию, у меня большой бэкграунд в программировании, а к работе
-        я подхожу со всей ответственностью.</p>
-      <p>Я работал с: Python, C#, JS, Bootstrap, Sqlite, Postgresql, SQLAlchemy, Flask, Winforms, Vue.js, LINQ, Selenium
-        и ещё множеством технологий. Я написал свою первую строку кода в 13.</p>
-    </section>
-
-    <section id="s3">
-      <h1>Моё портфолио</h1>
-      <div class="flex-container">
-        <div class="card flex-item" style="padding-top: auto">
-          <div class="content">
-            <i id="wlf"></i>
-            <h1>Клон wolfenstein</h1>
-            <p>В качестве курсового проекта я в одиночку разработал на c# движок, похожий на движок первого
-              вульфенштейна и написал на нём игру, не используя ничего кроме винформс. <a href="https://github.com/RESSIVAGE/COURSEPROJ/tree/master"> Посмотреть </a></p>
-          </div>
-          <div class="flap"></div>
-
+  <section>
+    <div class="inline-list">
+      <div class="inline-list__item column-list">
+        <div class="column-list__item">
+          <i class="img-small structure1" style="background-size:cover"></i>
+          <p class="card-caption">гуарана</p>
         </div>
-        <div class="card flex-item">
-          <div class="content">
-            <i id="dsr"></i>
-            <h1>Десериализатор</h1>
-            <p>в качестве учебного проекта мной была разработана программа, которая бы десериализовала данные из json
-              файла и искала конфликты. <a href="https://github.com/RESSIVAGE/c-sharp-json"> Посмотреть </a></p>
-          </div>
-          <div class="flap"></div>
 
+        <div class="column-list__item">
+          <i class="img-small structure2" style="background-size:cover"></i>
+          <p class="card-caption">кофеин</p>
         </div>
-        <div class="card flex-item">
-          <div class="content">
-            <i id="mst"></i>
-            <h1>Сайт по отслеживанию погоды в перми</h1>
-            <p>Я разработал этот сайт в качестве демонстрации своих навыков фулстека. В нём используется python (flask),
-              postgresql, bootstrap. Развёрнут на heroku. <a href="https://ibersenyov-test.herokuapp.com"> Посмотреть </a></p>
-          </div>
-          <div class="flap"></div>
 
+        <div class="column-list__item">
+          <i class="img-small structure3" style="background-size:cover"></i>
+          <p class="card-caption">пиколинат хрома</p>
         </div>
       </div>
-    </section>
 
-    <section id="s4">
-      <div class="flex-container" style="align-items:flex-start;">
-        <div class="flex-item">
-          <h1>Мои сильные стороны</h1>
-          <ul>
-            <li>
-              <h4>1) обучаемость</h4>
-              <p>Я хорошо знаю принципы программирования и мне не составляет труда быстро выучить новый паттерн или
-                фреймворк.</p>
-            </li>
-            <li>
-              <h4>2) аналитический склад ума</h4>
-              <p>У меня большой опыт в программировании, а потому все проблемы я решаю быстро и последовательно</p>
-            </li>
-            <li>
-              <h4>3) коммуникативность</h4>
-              <p>Я могу найти общий язык с людьми, с которыми мне придётся работать.</p>
-            </li>
-            <li>
-              <h4>4) стрессоустойчивость</h4>
-              <p>В профессии программиста очень важно иметь резистентность к стрессу, так как иначе очень легко сдаться
-                или перегореть.</p>
-            </li>
-            <li>
-              <h4>5) целеустремлённость</h4>
-              <p>Я всегда добиваюсь того результата, на который ориентируюсь, как бы ни было сложно его достичь.</p>
-            </li>
-          </ul>
-        </div>
-        <div class="flex-item">
-          <h1>Мои слабые стороны</h1>
-          <ul>
-            <li>
-              <h4>1) креативность</h4>
-              <p>Несмотря на то, что я умею разрабатывать сайты, мне намного проще верстать по макету, чем от себя, так
-                как мои креативные способности уступают аналитическим.</p>
-            </li>
-            <li>
-              <h4>2) небольшой опыт коммерческой разработки</h4>
-              <p>Из-за того, что последние 3 года я был сильно занят учёбой, из опыта оплачиваемой разработки у меня
-                лишь заказы на фрилансе, но я всегда готов расти и развиваться.</p>
-            </li>
-          </ul>
+      <div class="inline-list__item">
+        <div class="">
+          <i class="img product"></i>
         </div>
       </div>
-    </section>
 
-    <section id="s5">
-      <h2>Как со мной связаться?</h2>
-      <p>со мной можно связаться через почту - ressiwage@ya.ru, <a href="https://vk.com/ressiwage">вк</a> или <a
-          href="https://t.me/ressiwage">телеграм</a>. Я также отвечаю на звонки по номеру +7(919)466-00-01.</p>
-    </section>
-  </main>
+      <div class="inline-list__item column-list">
+        <div class="column-list__item">
+          <i class="img-small structure4" style="background-size:cover"></i>
+          <p class="card-caption">натрий</p>
+        </div>
 
-  <footer>
-  </footer>
+        <div class="column-list__item">
+          <i class="img-small structure5" style="background-size:cover"></i>
+          <p class="card-caption">L-теанин</p>
+        </div>
 
+        <div class="column-list__item">
+          <i class="img-small structure6" style="background-size:cover"></i>
+          <p class="card-caption">коллаген</p>
+        </div>
+      </div>
+    </div>
+    <button class="orderbtn" onclick="window.scrollTo(0, document.body.scrollHeight);">заказать сейчас!</button>
+  </section>
 
+  <section>
+    <div class="carousel">
 
+      <!-- Full-width images with number and caption text -->
+      <div class="carousel__item fade">
+        <div class="numbertext">1 / 3</div>
+        <img src={{ url_for('static', filename='imgs/img1.jpg' )}} style="width:100%">
+        <div class="text centered">'Лучшее решение в моей жизни'</div>
+        <div class="inline-list"
+          style="bottom:35%; width:300px; position:absolute;left:50%; transform:translate(-50%,50%)">
+          <i class="star inline-list__item"></i>
+          <i class="star inline-list__item"></i>
+          <i class="star inline-list__item"></i>
+          <i class="star inline-list__item"></i>
+          <i class="star inline-list__item"></i>
+        </div>
+      </div>
+
+      <div class="carousel__item fade">
+        <div class="numbertext">2 / 3</div>
+        <img src={{ url_for('static', filename='imgs/img2.jpg' )}} style="width:100%">
+        <div class="text centered">'Я ни о чем не жалею'</div>
+        <div class="inline-list"
+          style="bottom:35%; width:240px; position:absolute;left:50%; transform:translate(-50%,50%)">
+          <i class="star inline-list__item"></i>
+          <i class="star inline-list__item"></i>
+          <i class="star inline-list__item"></i>
+          <i class="star inline-list__item"></i>
+        </div>
+      </div>
+
+      <div class="carousel__item fade">
+        <div class="numbertext">3 / 3</div>
+        <img src={{ url_for('static', filename='imgs/img3.jpg' )}} style="width:100%">
+        <div class="text centered">'Я всем доволен'</div>
+        <div class="inline-list"
+          style="bottom:35%; width:300px; position:absolute;left:50%; transform:translate(-50%,50%)">
+          <i class="star inline-list__item"></i>
+          <i class="star inline-list__item"></i>
+          <i class="star inline-list__item"></i>
+          <i class="star inline-list__item"></i>
+          <i class="star inline-list__item"></i>
+        </div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <button class="orderbtn" onclick="window.scrollTo(0, document.body.scrollHeight);">заказать сейчас!</button>
+  </section>
+
+  <section>
+    <div class="inline-list">
+      <div class="inline-list__item"><i class="img person"></i></div>
+      <div class="inline-list__item" style="margin-right:10%;margin-left:10%;">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, quibusdam? Neque veritatis facilis
+          iusto, voluptatum tempora ex dolores delectus nisi aspernatur labore. Asperiores, ratione quod delectus autem
+          itaque quae voluptatum?</p>
+      </div>
+    </div>
+    <ul class="inline-list" style="margin-top:2em">
+      <li class="inline-list__item">Lorem ipsum</li>
+      <li class="inline-list__item">Lorem ipsum</li>
+      <li class="inline-list__item">Lorem ipsum</li>
+    </ul>
+    <button class="orderbtn" onclick="window.scrollTo(0, document.body.scrollHeight);">заказать сейчас!</button>
+  </section>
+
+  <section>
+    <h1 class="header">заголовок</h1>
+    <div class="timer centered">
+      <span class="hours big-text"></span>
+      <span class="medium-big-text">:</span>
+      <span class="minutes big-text"></span>
+      <span class="medium-big-text">:</span>
+      <span class="seconds big-text"></span>
+    </div>
+    <div class="inline-list">
+      <div class="inline-list__item">
+        <div class="inline-list">
+          <span class="inline-list__item" style="margin-right: 2em;">старая цена: </span>
+          <h3 class="price crossed-out inline-list__item medium-big-text">999</h3>
+        </div>
+        <div class="inline-list">
+          <span class="inline-list__item" style="margin-right: 2em;">новая цена: </span>
+          <h3 class="price big-text inline-list__item pulse">998</h3>
+        </div>
+      </div>
+      <div class="inline-list__item" style="margin-top:0;margin-bottom:0;">
+        <form class="column-list" action="post">
+          <span class="column-list__item">закажите сейчас!</span>
+          <div class="form-text-input column-list__item">
+            <input class="" placeholder="" type="text" name="name" id="" required="">
+            <label>ваше имя</label>
+          </div>
+          <div class="form-text-input column-list__item">
+            <input class="" placeholder="" type="number" id="phone" name="phone" required="">
+            <label>ваш телефон</label>
+          </div>
+          <input class="column-list__item" type="button" value="отправить">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("carousel__item");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+  <script>
+    document.getElementsByClassName("hours")[0].innerHTML = '2';
+    document.getElementsByClassName("minutes")[0].innerHTML = '00';
+    document.getElementsByClassName("seconds")[0].innerHTML = '00';
+    var remaining = 60 * 60 * 2;
+    var x = setInterval(function () {
+      remaining -= 1;
+      if (remaining < 0) {
+        remaining = 60 * 60 * 2;
+      }
+      document.getElementsByClassName("hours")[0].innerHTML = Math.floor(remaining / 60 / 60);
+      document.getElementsByClassName("minutes")[0].innerHTML = Math.floor(remaining / 60) % 60;
+      document.getElementsByClassName("seconds")[0].innerHTML = remaining % 60;
+    }, 1000);
+  </script>
 </body>
 
 </html>

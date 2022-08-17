@@ -1,0 +1,72 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+form{
+    min-height:40vh;
+    min-width: 70%;
+    padding: 2em 1em;
+    border-radius: 10px;
+    background-color: rgba(255, 200, 97,.5);
+    box-shadow: 0 0 10px black;
+}
+.form-text-input{
+    position:relative;
+}
+.form-text-input label{
+    position:absolute;
+    transition: .5s all;
+    top:0;
+    left:0;
+    pointer-events: none;
+    color:rgba(0,0,0,.5);
+    font-size: .75em;
+    margin: .5em 0 .5em .5em;
+    line-height:1;
+}
+.form-text-input input:focus ~ label,
+.form-text-input input:valid ~ label{
+    transform: scale(.5) translateX(-50%) translateY(-200%);
+    font-weight:700;
+    color:black;
+}
+.form-text-input input{
+    transition: .5s all;
+    outline: none;
+    border: 0;
+    border-bottom: 3px solid #fff;
+}
+.form-text-input input:focus{
+    border: 0;
+    border-bottom: 3px inset rgb(0, 0, 0);
+}
+.form-text-input:after{
+    font-size: .5em;
+
+    position:absolute;
+    right:0;
+    top:0;
+    content:"";
+    display:block;
+}
+.form-text-input:first-of-type:after{
+    content:"илья берсенёв"
+}
+.form-text-input:last-of-type:after{
+    content:"89194660001"
+}
+input[type=button]{
+    background-color:rgb(255, 245, 112);
+    transition: .3s;
+    box-shadow: 0 0 3px black;
+
+}
+input[type=button]:hover{
+    background-color:#fff
+}
